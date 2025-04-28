@@ -3,12 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 
 import { Providers } from '@/providers';
 import '@/styles/globals.css';
-import { setRequestLocale } from 'next-intl/server';
-import { hasLocale } from 'next-intl';
-import { i18nRouting } from '@/lib/i18n.lib';
-import { notFound } from 'next/navigation';
-import { TAppRequestParams } from '@/types/request.types';
-import { ReactNode } from 'react';
+import { appConfig } from '@/config/app.config';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -26,20 +21,12 @@ export const metadata: Metadata = {
 };
 
 export async function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'de' }];
+  return appConfig.supportedLocales;
 }
 
-export default async function RootLayout({ children, params }: Readonly<{ children: ReactNode; params: Promise<TAppRequestParams> }>) {
-  const { lang } = await params;
-  if (!hasLocale(i18nRouting.locales, lang)) {
-    notFound();
-  }
-
-  // Enable static rendering
-  setRequestLocale(lang);
-
+export default async function RootLayout({ children, params }: Readonly<{ children: React.ReactNode; params: Promise<{ lang: 'en-US' | 'de' }> }>) {
   return (
-    <html suppressHydrationWarning lang={lang}>
+    <html suppressHydrationWarning lang={(await params).lang}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Providers>{children}</Providers>
       </body>

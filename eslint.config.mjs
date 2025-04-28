@@ -1,6 +1,6 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import { FlatCompat } from '@eslint/eslintrc';
 
 // @ts-check
 
@@ -19,7 +19,7 @@ const compat = new FlatCompat({
 
 export default tseslint.config(
   eslint.configs.recommended,
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...compat.extends('next/core-web-vitals', 'next/typescript'),
   ...tseslint.configs.strict,
   ...tseslint.configs.stylistic,
   eslintConfigPrettier,
@@ -69,4 +69,3 @@ export default tseslint.config(
     },
   }),
 );
-

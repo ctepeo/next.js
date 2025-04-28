@@ -6,7 +6,7 @@
   "printWidth": 160,
   "overrides": [
     {
-      "files": ["**/*.json", "**/*.css", "**/*.scss", "**/*.html", "**.*.ts", "**/*.tsx", "**/*.mjs"],
+      "files": ["**/*.json", "**/*.css", "**/*.scss", "**/*.html", "**.*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
       "options": {
         "singleQuote": true
       }

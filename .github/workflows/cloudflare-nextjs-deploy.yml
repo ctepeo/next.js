@@ -2,8 +2,8 @@ name: Deploy to Cloudflare Worker
 on:
   push:
     branches:
-  #    - nest-js
-       - main
+      #    - nest-js
+      - main
   pull_request:
     branches:
       - dev
