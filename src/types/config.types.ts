@@ -1,5 +1,7 @@
-export type TAppLocale = 'en' | 'de' | 'by';
-export type TAppTheme = 'light' | 'dark';
+import { TAppLocales, TAppThemes } from '@/config/app.config';
+
+export type TAppLocale = TAppLocales[number];
+export type TAppTheme = TAppThemes[number];
 
 export interface TAppConfig {
   appName: string;

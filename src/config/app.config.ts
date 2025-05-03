@@ -8,3 +8,7 @@ export const appConfig: TAppConfig = {
   supportedThemes: ['light', 'dark'],
   // Add any other configuration options you need
 };
+
+//  TS
+export type TAppLocales = 'en' | 'de' | 'by';
+export type TAppThemes = 'light' | 'dark';

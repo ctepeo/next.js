@@ -30,16 +30,16 @@ export async function generateStaticParams() {
 }
 
 export default async function RootLayout({ children, params }: Readonly<{ children: ReactNode; params: Promise<TAppRequestParams> }>) {
-  const { lang } = await params;
-  if (!hasLocale(i18nRouting.locales, lang)) {
+  const { locale } = await params;
+  if (!hasLocale(i18nRouting.locales, locale)) {
     notFound();
   }
 
   // Enable static rendering
-  setRequestLocale(lang);
+  setRequestLocale(locale);
 
   return (
-    <html suppressHydrationWarning lang={lang}>
+    <html suppressHydrationWarning lang={locale}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Providers>{children}</Providers>
       </body>
