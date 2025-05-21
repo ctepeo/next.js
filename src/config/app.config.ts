@@ -6,6 +6,17 @@ export const appConfig: TAppConfig = {
   supportedLocales: ['en', 'de', 'by'],
   defaultTheme: 'light',
   supportedThemes: ['light', 'dark'],
+  //  next.js config
+  images: {
+    minimumCacheTTL: 360, // 10 minutes
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.domain.com',
+        pathname: '/**',
+      },
+    ],
+  },
   // Add any other configuration options you need
 };
 
