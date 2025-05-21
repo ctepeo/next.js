@@ -1,10 +1,11 @@
 import { NextResponse, NextRequest } from 'next/server';
 import { appConfig } from '@/config/app.config';
 import { TAppLocale } from '@/types/config.types';
+import { i18nMiddleware } from '@/lib/i18n.lib';
 
 // Get the preferred locale, similar to the above or using a library
 function getLocale(request: NextRequest): TAppLocale {
-  console.log({ request });
+  console.log('middleware > getLocale > request', { request });
   return appConfig.defaultLocale; // Default locale
 }
 
@@ -35,3 +36,5 @@ export const config = {
     '/((?!api|trpc|_next|_vercel|.*\\..*).*)',
   ],
 };
+
+export default i18nMiddleware;

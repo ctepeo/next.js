@@ -11,7 +11,7 @@ export const i18nRouting = defineRouting({
   defaultLocale: appConfig.defaultLocale,
 });
 export const { Link, redirect, usePathname, useRouter, getPathname } = createNavigation(i18nRouting);
-//export const i18nMiddleware = createMiddleware(i18nRouting);
+export const i18nMiddleware = createMiddleware(i18nRouting);
 export default getRequestConfig(async ({ requestLocale }) => {
   const requested: string = (await requestLocale) || i18nRouting.defaultLocale;
   const locale: TAppLocale = hasLocale(i18nRouting.locales, requested) ? requested : i18nRouting.defaultLocale;
