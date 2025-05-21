@@ -10,3 +10,9 @@ export interface TAppConfig {
   defaultTheme: TAppTheme;
   supportedThemes: TAppTheme[];
 }
+
+export interface TFontConfig {
+  name: string;
+  variable: string;
+  subsets: string[];
+}

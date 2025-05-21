@@ -1,19 +1,12 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 
 import { Providers } from '@/providers';
 import '@/styles/globals.css';
 import { appConfig } from '@/config/app.config';
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
+import { HeaderLayout } from '@components/layout/header';
+import { ReactNode } from 'react';
+import { TAppRequestParams } from '@/types/request.types';
+import { fontClassNames } from '@/config/fonts.config';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -24,11 +17,16 @@ export async function generateStaticParams() {
   return appConfig.supportedLocales;
 }
 
-export default async function RootLayout({ children, params }: Readonly<{ children: React.ReactNode; params: Promise<{ lang: 'en-US' | 'de' }> }>) {
+export default async function RootLayout({ children, params }: Readonly<{ children: ReactNode; params: Promise<TAppRequestParams> }>) {
+  const { locale } = await params;
+
   return (
-    <html suppressHydrationWarning lang={(await params).lang}>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Providers>{children}</Providers>
+    <html suppressHydrationWarning lang={locale}>
+      <body className={fontClassNames()}>
+        <Providers>
+          <HeaderLayout />
+          {children}
+        </Providers>
       </body>
     </html>
   );

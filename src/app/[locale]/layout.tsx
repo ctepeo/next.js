@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 
 import { Providers } from '@/providers';
 import '@/styles/globals.css';
@@ -9,16 +8,8 @@ import { i18nRouting } from '@/lib/i18n.lib';
 import { notFound } from 'next/navigation';
 import { TAppRequestParams } from '@/types/request.types';
 import { ReactNode } from 'react';
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
+import { HeaderLayout } from '@components/layout/header';
+import { fontClassNames } from '@/config/fonts.config';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -40,7 +31,8 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
 
   return (
     <html suppressHydrationWarning lang={locale}>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      {/*<HeaderLayout />*/}
+      <body className={fontClassNames()}>
         <Providers>{children}</Providers>
       </body>
     </html>
