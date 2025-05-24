@@ -11,14 +11,15 @@
     "prefix": ""
   },
   "aliases": {
-    "components": "@/components",
-    "utils": "@/lib/utils",
     "ui": "@/components/ui",
-    "lib": "@/lib",
+    "components": "@/components",
+    "utils": "@/libs/utils",
+    "libs": "@/libs",
     "hooks": "@/hooks",
     "types": "@/types",
-    "config": "@/config",
-    "dictionaries": "@/i18n"
+    "configs": "@/configs",
+    "dictionaries": "@/i18n",
+    "stores": "@/stores"
   },
   "iconLibrary": "lucide"
 }

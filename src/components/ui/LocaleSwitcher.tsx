@@ -1,4 +1,4 @@
-import { Link } from '@/lib/i18n.lib';
+import { Link } from '@/libs/i18n.lib';
 
 import {
   DropdownMenu,

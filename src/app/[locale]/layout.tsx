@@ -4,12 +4,12 @@ import { Providers } from '@/providers';
 import '@/styles/globals.css';
 import { setRequestLocale } from 'next-intl/server';
 import { hasLocale } from 'next-intl';
-import { i18nRouting } from '@/lib/i18n.lib';
+import { i18nRouting } from '@/libs/i18n.lib';
 import { notFound } from 'next/navigation';
 import { TAppRequestParams } from '@/types/request.types';
 import { ReactNode } from 'react';
 import { HeaderLayout } from '@components/layout/header';
-import { fontClassNames } from '@/config/fonts.config';
+import { fontClassNames } from '@/configs/fonts.config';
 
 export const metadata: Metadata = {
   title: 'Create Next App',

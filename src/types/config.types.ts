@@ -1,4 +1,4 @@
-import { TAppLocales, TAppThemes } from '@/config/app.config';
+import { TAppLocales, TAppThemes } from '@/configs/app.config';
 import { ImageConfigComplete } from 'next/dist/shared/lib/image-config';
 
 export type TAppLocale = TAppLocales[number];
@@ -10,8 +10,8 @@ export interface TAppConfig {
   supportedLocales: TAppLocale[];
   defaultTheme: TAppTheme;
   supportedThemes: TAppTheme[];
-  // next.js config
-  images: ImageConfigComplete;
+  // next.js configs
+  images: Partial<ImageConfigComplete>;
 }
 
 export interface TFontConfig {

@@ -1,7 +1,7 @@
 import { NextResponse, NextRequest } from 'next/server';
-import { appConfig } from '@/config/app.config';
+import { appConfig } from '@/configs/app.config';
 import { TAppLocale } from '@/types/config.types';
-import { i18nMiddleware } from '@/lib/i18n.lib';
+import { i18nMiddleware } from '@/libs/i18n.lib';
 
 // Get the preferred locale, similar to the above or using a library
 function getLocale(request: NextRequest): TAppLocale {

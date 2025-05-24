@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 
 import { Providers } from '@/providers';
 import '@/styles/globals.css';
-import { appConfig } from '@/config/app.config';
+import { appConfig } from '@/configs/app.config';
 import { HeaderLayout } from '@components/layout/header';
 import { ReactNode } from 'react';
 import { TAppRequestParams } from '@/types/request.types';
-import { fontClassNames } from '@/config/fonts.config';
+import { fontClassNames } from '@/configs/fonts.config';
 
 export const metadata: Metadata = {
   title: 'Create Next App',

@@ -6,7 +6,7 @@ export const appConfig: TAppConfig = {
   supportedLocales: ['en', 'de', 'by'],
   defaultTheme: 'light',
   supportedThemes: ['light', 'dark'],
-  //  next.js config
+  //  next.js configs
   images: {
     minimumCacheTTL: 360, // 10 minutes
     remotePatterns: [
