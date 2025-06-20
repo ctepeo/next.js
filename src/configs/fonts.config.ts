@@ -1,4 +1,3 @@
-import { Geist, Geist_Mono } from 'next/font/google';
 import { TFontConfig } from '@/types/config.types';
 
 export const fontsConfig: Record<string, TFontConfig> = {

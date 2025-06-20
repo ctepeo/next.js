@@ -19,7 +19,8 @@
     "types": "@/types",
     "configs": "@/configs",
     "dictionaries": "@/i18n",
-    "stores": "@/stores"
+    "stores": "@/stores",
+    "middlwarewares": "@/middlewares"
   },
   "iconLibrary": "lucide"
 }

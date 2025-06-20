@@ -8,7 +8,6 @@ import { i18nRouting } from '@/libs/i18n.lib';
 import { notFound } from 'next/navigation';
 import { TAppRequestParams } from '@/types/request.types';
 import { ReactNode } from 'react';
-import { HeaderLayout } from '@components/layout/header';
 import { fontClassNames } from '@/configs/fonts.config';
 
 export const metadata: Metadata = {
