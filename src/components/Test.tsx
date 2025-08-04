@@ -1,7 +1,6 @@
 'use client';
 
 import { useStore } from '@providers/store.provider';
-import { Button } from '@components/ui/button';
 import { useShallow } from 'zustand/react/shallow';
 
 export const Test = () => {
@@ -15,7 +14,7 @@ export const Test = () => {
   return (
     <div>
       <div>useStore [isLoading: {isLoading ? 1 : 0}]</div>
-      <Button onClick={() => setIsLoading(!isLoading)}></Button>
+      <button onClick={() => setIsLoading(!isLoading)}>CLICK</button>
     </div>
   );
 };

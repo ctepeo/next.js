@@ -1,20 +1,42 @@
 import { Link } from '@/libs/i18n.lib';
+import { useTranslations } from 'next-intl';
+import { LanguageSwitcher } from '@components/LanguageSwitcher/LanguageSwitcher';
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from '@heroui/navbar';
+import { Button } from '@heroui/button';
 
 export const HeaderLayout = () => {
+  const t = useTranslations('app');
+
   return (
-    <header className="flex items-center justify-between p-4 bg-gray-800 text-white">
-      <div className="text-lg font-bold">Next.js App</div>
-      <nav className="flex space-x-4">
-        <Link href="/" className="hover:text-gray-400">
-          Home
+    <Navbar>
+      <NavbarBrand>
+        <Link href="/" className="flex items-center gap-2">
+          {t('name')}
         </Link>
-        <Link href="/about" className="hover:text-gray-400">
-          About
-        </Link>
-        <Link href="/contact" className="hover:text-gray-400">
-          Contact
-        </Link>
-      </nav>
-    </header>
+      </NavbarBrand>
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarItem>
+          <Link color="foreground" href="/blog/hello">
+            {t('navigation.public.page')}
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="/contacts">
+            {t('navigation.public.section')}
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link aria-current="page" href="/user/">
+            {t('navigation.private')}
+          </Link>
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarContent justify="end">
+        <NavbarItem className="hidden lg:flex">
+          <Link href="#">Login</Link>
+        </NavbarItem>
+        <NavbarItem>xxx</NavbarItem>
+      </NavbarContent>
+    </Navbar>
   );
 };

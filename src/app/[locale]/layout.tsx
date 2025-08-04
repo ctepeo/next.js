@@ -30,7 +30,6 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
 
   return (
     <html suppressHydrationWarning lang={locale}>
-      {/*<HeaderLayout />*/}
       <body className={fontClassNames()}>
         <Providers>{children}</Providers>
       </body>

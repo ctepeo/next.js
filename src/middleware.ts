@@ -5,9 +5,7 @@ import { AuthMiddleware } from '@/middlewares/auth.middleware';
 
 const globalMiddlewares: GlobalMiddlewareConfig = {
   before: i18nMiddleware,
-  after: () => {
-    console.log('Global middleware after all routes');
-  },
+  after: () => {},
 };
 const middlewares = {
   // OR: [authMiddleware, ...]

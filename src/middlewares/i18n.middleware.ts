@@ -27,8 +27,6 @@ function getLocale(request: NextRequest): TAppLocale {
 // }
 
 export const i18nMiddleware = async (request: NextRequest, _event: NemoEvent) => {
-  console.log('middleware > i18nMiddleware > request');
-
   // Check if there is any supported locale in the pathname
   const { pathname } = request.nextUrl;
   const pathnameHasLocale = appConfig.supportedLocales.some((locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`);
@@ -40,6 +38,5 @@ export const i18nMiddleware = async (request: NextRequest, _event: NemoEvent) =>
   request.nextUrl.pathname = `/${locale}${pathname}`;
   // e.g. incoming request is /products
   // The new URL is now /en-US/products
-  console.log('middleware > i18nMiddleware > redirecting to', request.nextUrl);
   return NextResponse.redirect(request.nextUrl);
 };
