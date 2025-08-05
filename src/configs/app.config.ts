@@ -1,7 +1,11 @@
 import { TAppConfig } from '@/types/config.types';
 
+//  this import breaks the app for some reason
+//  import { i18nConfig } from './i18n.config.ts';
+
 export const appConfig: TAppConfig = {
   appName: 'Next.js App',
+  // duplicated in i18n.config.ts
   defaultLocale: 'en',
   supportedLocales: ['en', 'de', 'by'],
   defaultTheme: 'light',
@@ -19,7 +23,3 @@ export const appConfig: TAppConfig = {
   },
   // Add any other configuration options you need
 };
-
-//  TS
-export type TAppLocales = 'en' | 'de' | 'by';
-export type TAppThemes = 'light' | 'dark';

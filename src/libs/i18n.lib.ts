@@ -19,7 +19,7 @@ const getMessages: (locale: string) => Promise<LanguageStrings> = async (locale:
     const messages: LanguageStringsCombined = await import(`@/i18n/${locale}.lang`);
     return messages.messages || {};
   } catch (error) {
-    console.error(`Failed to load messages for locale "${locale}":`, error);
+    console.warn(`Failed to load messages for locale "${locale}":`, error);
     return {};
   }
 };

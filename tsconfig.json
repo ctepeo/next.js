@@ -31,6 +31,14 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "test/**/*.tsx", "test/**/*.ts", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "test/**/*.tsx",
+    "test/**/*.ts",
+    ".next/types/**/*.ts",
+    "node_modules/preact/src/internal.d.ts"
+  ],
   "exclude": ["node_modules", "test", "build", "**/*spec.ts"]
 }

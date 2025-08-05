@@ -36,6 +36,9 @@ export const HeaderLayout = () => {
           <Link href="#">Login</Link>
         </NavbarItem>
         <NavbarItem>xxx</NavbarItem>
+        <NavbarItem>
+          <LanguageSwitcher />
+        </NavbarItem>
       </NavbarContent>
     </Navbar>
   );

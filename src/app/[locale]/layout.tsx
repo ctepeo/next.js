@@ -9,6 +9,7 @@ import { notFound } from 'next/navigation';
 import { TAppRequestParams } from '@/types/request.types';
 import { ReactNode } from 'react';
 import { fontClassNames } from '@/configs/fonts.config';
+import { HeaderLayout } from '@components/layout/header';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -31,7 +32,10 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
   return (
     <html suppressHydrationWarning lang={locale}>
       <body className={fontClassNames()}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <HeaderLayout />
+          {children}
+        </Providers>
       </body>
     </html>
   );

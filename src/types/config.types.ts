@@ -1,4 +1,5 @@
-import { TAppLocales, TAppThemes } from '@/configs/app.config';
+import { TAppLocales } from '@/types/i18n.types';
+import { TAppThemes } from '@/types/app.types';
 import { ImageConfigComplete } from 'next/dist/shared/lib/image-config';
 
 export type TAppLocale = TAppLocales[number];
