@@ -9,7 +9,7 @@ import { notFound } from 'next/navigation';
 import { TAppRequestParams } from '@/types/request.types';
 import { ReactNode } from 'react';
 import { fontClassNames } from '@/configs/fonts.config';
-import { HeaderLayout } from '@components/layout/header';
+import { HeaderLayout } from '@components/Layout/PageHeader';
 
 export const metadata: Metadata = {
   title: 'Create Next App',

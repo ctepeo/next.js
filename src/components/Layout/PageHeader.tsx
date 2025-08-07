@@ -2,7 +2,6 @@ import { Link } from '@/libs/i18n.lib';
 import { useTranslations } from 'next-intl';
 import { LanguageSwitcher } from '@components/LanguageSwitcher/LanguageSwitcher';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from '@heroui/navbar';
-import { Button } from '@heroui/button';
 
 export const HeaderLayout = () => {
   const t = useTranslations('app');
