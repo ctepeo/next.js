@@ -4,3 +4,8 @@ export interface TAppRequestParams {
   locale: TAppLocale;
   theme: string;
 }
+
+export interface TAppHeader {
+  key: string;
+  value: string;
+}

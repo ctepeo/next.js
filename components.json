@@ -11,16 +11,16 @@
     "prefix": ""
   },
   "aliases": {
-    "ui": "@/components/ui",
-    "components": "@/components",
-    "utils": "@/libs/utils",
-    "libs": "@/libs",
-    "hooks": "@/hooks",
-    "types": "@/types",
-    "configs": "@/configs",
-    "dictionaries": "@/i18n",
-    "stores": "@/stores",
-    "middlwarewares": "@/middlewares"
+    "ui": "@components/ui",
+    "components": "@components",
+    "utils": "@libs/utils",
+    "libs": "@libs",
+    "hooks": "@hooks",
+    "types": "@types",
+    "configs": "@configs",
+    "dictionaries": "@i18n",
+    "stores": "@stores",
+    "middlwarewares": "@middlewares"
   },
   "iconLibrary": "lucide"
 }

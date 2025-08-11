@@ -1,12 +1,12 @@
 'use client';
 import { useLocale } from 'next-intl';
-import { Link, usePathname } from '@/libs/i18n.lib';
-import { i18nLocalesData } from '@/configs/i18n.config';
-import { Ti18nLocaleData } from '@/types/i18n.types';
+import { Link, usePathname } from '@libs/i18n.lib';
+import { i18nLocalesData } from '@configs/i18n.config';
+import { Ti18nLocaleData } from '@types/i18n.types';
 import { FC } from 'react';
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownSection, DropdownItem } from '@heroui/dropdown';
 import { Button } from '@heroui/button';
-import { appConfig } from '@/configs/app.config';
+import { appConfig } from '@configs/app.config';
 
 export const LanguageSwitcher = () => {
   const iconClasses = 'text-xl text-default-500 pointer-events-none flex-shrink-0';

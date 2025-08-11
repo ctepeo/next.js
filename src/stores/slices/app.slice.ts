@@ -1,6 +1,6 @@
 import { StateCreator } from 'zustand';
 
-import { Store } from '@/stores/index.store';
+import { Store } from '@stores/index.store';
 
 export interface AppState {
   isLoading: boolean;

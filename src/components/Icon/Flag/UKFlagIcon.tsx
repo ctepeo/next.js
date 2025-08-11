@@ -1,4 +1,4 @@
-import { SvgIcon } from '@/components/Icon/SvgIcon';
+import { SvgIcon } from '@components/Icon/SvgIcon';
 
 export const UKFlagIcon = ({ className }: { className?: string }) => {
   return (

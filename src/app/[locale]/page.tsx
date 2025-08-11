@@ -2,8 +2,8 @@ import { useTranslations } from 'next-intl';
 import { Usable, use } from 'react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { TAppRequestParams } from '@/types/request.types';
-import { Test } from '@/components/Test';
-import { UserInfo } from '@components/user/UserInfo';
+import { Test } from '@components/Test';
+import { UserInfo } from '@components/User/UserInfo';
 import { Metadata } from 'next';
 
 export const generateMetadata: ({ params }: { params: Promise<TAppRequestParams> }) => Promise<Metadata> = async ({

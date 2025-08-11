@@ -1,7 +1,7 @@
 import { createNEMO, GlobalMiddlewareConfig } from '@rescale/nemo';
 import { NextMiddleware } from 'next/server';
-import { i18nMiddleware } from '@/middlewares/i18n.middleware';
-import { AuthMiddleware } from '@/middlewares/auth.middleware';
+import { i18nMiddleware } from '@middlewares/i18n.middleware';
+import { AuthMiddleware } from '@middlewares/auth.middleware';
 
 const globalMiddlewares: GlobalMiddlewareConfig = {
   before: i18nMiddleware,

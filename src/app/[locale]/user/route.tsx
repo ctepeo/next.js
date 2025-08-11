@@ -1,4 +1,4 @@
-import { auth } from '@/libs/auth.lib';
+import { auth } from '@libs/auth.lib';
 
 export async function GET() {
   const session = await auth();

@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { ReactNode } from 'react';
-import { Link } from '@/libs/i18n.lib';
+import { Link } from '@libs/i18n.lib';
 
 interface Props {
   children?: ReactNode;

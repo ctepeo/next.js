@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
 
-import { Providers } from '@/providers';
-import '@/styles/globals.css';
+import { Providers } from '@providers/index';
+import '@styles/globals.css';
 import { setRequestLocale } from 'next-intl/server';
 import { hasLocale } from 'next-intl';
-import { i18nRouting } from '@/libs/i18n.lib';
+import { i18nRouting } from '@libs/i18n.lib';
 import { notFound } from 'next/navigation';
-import { TAppRequestParams } from '@/types/request.types';
+import { TAppRequestParams } from '@types/request.types';
 import { ReactNode } from 'react';
-import { fontClassNames } from '@/configs/fonts.config';
+import { fontClassNames } from '@configs/fonts.config';
 import { HeaderLayout } from '@components/Layout/PageHeader';
 
 export const metadata: Metadata = {

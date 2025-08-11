@@ -3,8 +3,8 @@ import { createNavigation } from 'next-intl/navigation';
 import createMiddleware from 'next-intl/middleware';
 import { getRequestConfig, GetRequestConfigParams, RequestConfig } from 'next-intl/server';
 import { hasLocale } from 'next-intl';
-import { appConfig } from '@/configs/app.config';
-import { TAppLocale } from '@/types/config.types';
+import { appConfig } from '@configs/app.config';
+import { TAppLocale } from '@types/config.types';
 import { LanguageStrings, LanguageStringsCombined } from '@/types/i18n.types';
 
 export const i18nRouting = defineRouting({
@@ -16,7 +16,7 @@ export const i18nMiddleware = createMiddleware(i18nRouting);
 
 const getMessages: (locale: string) => Promise<LanguageStrings> = async (locale: TAppLocale) => {
   try {
-    const messages: LanguageStringsCombined = await import(`@/i18n/${locale}.lang`);
+    const messages: LanguageStringsCombined = await import(`@i18n/${locale}.lang`);
     return messages.messages || {};
   } catch (error) {
     console.warn(`Failed to load messages for locale "${locale}":`, error);

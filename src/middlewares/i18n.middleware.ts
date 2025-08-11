@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { appConfig } from '@/configs/app.config';
-import { TAppLocale } from '@/types/config.types';
+import { appConfig } from '@configs/app.config';
+import { TAppLocale } from '@types/config.types';
 import { NemoEvent } from '@rescale/nemo';
 
 // Get the preferred locale, similar to the above or using a library

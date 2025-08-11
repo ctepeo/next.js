@@ -1,4 +1,4 @@
-import { Link } from '@/libs/i18n.lib';
+import { Link } from '@libs/i18n.lib';
 import { useTranslations } from 'next-intl';
 import { LanguageSwitcher } from '@components/LanguageSwitcher/LanguageSwitcher';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from '@heroui/navbar';
@@ -32,7 +32,7 @@ export const HeaderLayout = () => {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
+          <Link href={'/user/login'}>Login</Link>
         </NavbarItem>
         <NavbarItem>xxx</NavbarItem>
         <NavbarItem>

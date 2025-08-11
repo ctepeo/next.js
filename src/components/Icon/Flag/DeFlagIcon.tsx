@@ -1,4 +1,4 @@
-import { SvgIcon } from '@/components/Icon/SvgIcon';
+import { SvgIcon } from '@components/Icon/SvgIcon';
 
 export const DeFlagIcon = ({ className }: { className?: string }) => {
   return (

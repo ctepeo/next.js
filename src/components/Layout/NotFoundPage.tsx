@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import PageLayout from '@/components/Layout/PageLayout';
+import PageLayout from '@components/Layout/PageLayout';
 
 export default function NotFoundPage() {
   const t = useTranslations('app.page.404');
